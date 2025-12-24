@@ -67,33 +67,33 @@ button:focus-visible {
   }
 }
 :root[data-theme='light'] {
-  --bg: linear-gradient(135deg, #f9fafb, #e5e7eb); /* white → light gray */
+  --bg: linear-gradient(135deg, #f9fafb, #e5e7eb);
   --text: #111827;
   --muted: #6b7280;
-  --card: #f3f4f6; /* soft gray cards */
-  --accent: #374151; /* dark gray accent */
+  --card: #f3f4f6;
+  --accent: #374151;
 }
 
 :root[data-theme='light'] {
-  --bg: linear-gradient(135deg, #f9fafb, #e5e7eb); /* white → light gray */
+  --bg: linear-gradient(135deg, #f9fafb, #e5e7eb); 
   --text: #111827;
   --muted: #6b7280;
-  --card: #f3f4f6; /* soft gray cards */
-  --accent: #374151; /* dark gray accent */
+  --card: #f3f4f6; 
+  --accent: #374151; 
 }
 :root[data-theme='light'] {
-  --bg: linear-gradient(135deg, #f9fafb, #e5e7eb); /* white → light gray */
+  --bg: linear-gradient(135deg, #f9fafb, #e5e7eb); 
   --text: #111827;
   --muted: #6b7280;
-  --card: #f3f4f6; /* soft gray cards */
-  --accent: #374151; /* dark gray accent */
+  --card: #f3f4f6; 
+  --accent: #374151;
 }
 :root[data-theme='light'] {
-  --bg: linear-gradient(135deg,#d7c8d0, #85114b ); /* rose → pink */
+  --bg: linear-gradient(135deg,#d7c8d0, #85114b );
   --text: #1f2937;
   --muted: #0e0f10;
-  --card: #c1b6bd; /* pale pink cards */
-  --accent: #56062e; /* vibrant pink accent */
+  --card: #c1b6bd; 
+  --accent: #56062e; 
 }
 
 
@@ -133,18 +133,19 @@ body {
 .title { margin:0; font-size:1.6rem }
 /* .theme-toggle { background:transparent; border:1px solid rgba(0,0,0,0.08); padding:6px 10px } */
 .theme-toggle {
-  background: var(--card);
-  color: var(--text);
-  border: 1px solid var(--muted);
-  border-radius: 6px;
+  background: transparent;  
+  color: var(--text);       
+  border: none;            
+  border-radius: 0;         
   padding: 6px 12px;
   cursor: pointer;
-  transition: background 0.3s, color 0.3s;
 }
+
 .theme-toggle:hover {
-  background: var(--accent);
-  color: #fff;
+  background: transparent;   
+  color: var(--text);        
 }
+
 
 .controls { margin-bottom:12px }
 .task-input { display:flex; gap:8px }
@@ -159,7 +160,7 @@ body {
   align-items: center;
   padding: 10px;
   border-radius: 8px;
-  background: var(--card); /* now pink in light mode */
+  background: var(--card); 
 }
 
 .task-item.completed .task-text { text-decoration:line-through; opacity:0.7 }
@@ -176,5 +177,4 @@ body {
   .btn { padding:8px }
 }
 
-/* Ensure theme is applied on initial load */
 :root { --bg: #ffffff; --text: #111827; }

@@ -1,16 +1,102 @@
-# React + Vite
+Task Tracker Application
+A responsive Task Tracker built with React, featuring dark mode, task management, statistics, and persistent storage.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+1️⃣ Header Section (Title + Dark Mode Toggle)
+Displays app title (h1).
 
-Currently, two official plugins are available:
+Dark Mode toggle button.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Switches between Light Mode and Dark Mode.
 
-## React Compiler
+Preference stored in React state and persisted with localStorage.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2️⃣ Task Input Section (Add Task)
+Text input for entering tasks.
 
-## Expanding the ESLint configuration
+"Add Task" button.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Prevents adding empty tasks.
+
+Each task includes:
+
+id
+
+text
+
+completed (boolean)
+
+3️⃣ Task List Section (Display Tasks)
+Displays all tasks in a list.
+
+Each task item includes:
+
+Checkbox (mark completed).
+
+Task text.
+
+Delete button.
+
+Completed tasks are visually distinguishable.
+
+Checkbox updates completion state instantly.
+
+Delete button removes tasks immediately.
+
+4️⃣ Delete Task Feature
+Every task is deletable.
+
+Deletion updates UI and stored data instantly.
+
+5️⃣ Stats Page (Navigation Required)
+Displays:
+
+Total number of tasks.
+
+Number of completed tasks.
+
+Number of remaining tasks.
+
+Uses React Router for navigation.
+
+Task data shared across pages.
+
+6️⃣ Global State Management
+Uses Context API (or Jotai).
+
+Tasks stored in global state.
+
+Both Home and Stats pages access the same task data.
+
+💾 Persistence
+Tasks persist after page refresh.
+
+Dark mode preference persists.
+
+Uses localStorage.
+
+🎨 Styling
+Styled with Plain CSS or Tailwind CSS.
+
+Clear distinction between light and dark mode.
+
+Responsive layout.
+
+📱 Responsive Design
+Fully responsive across devices.
+
+On small screens:
+
+Layout adapts properly.
+
+Buttons remain usable.
+
+Text remains readable.
+📊 Future Improvements
+Add task editing functionality.
+
+Implement task categories/tags.
+
+Add animations for task transitions.
+
+Sync tasks with a backend API.
