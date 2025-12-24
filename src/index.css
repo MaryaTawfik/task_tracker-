@@ -1,0 +1,180 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+:root[data-theme='light'] {
+  --bg: linear-gradient(135deg, #f9fafb, #e5e7eb); /* white → light gray */
+  --text: #111827;
+  --muted: #6b7280;
+  --card: #f3f4f6; /* soft gray cards */
+  --accent: #374151; /* dark gray accent */
+}
+
+:root[data-theme='light'] {
+  --bg: linear-gradient(135deg, #f9fafb, #e5e7eb); /* white → light gray */
+  --text: #111827;
+  --muted: #6b7280;
+  --card: #f3f4f6; /* soft gray cards */
+  --accent: #374151; /* dark gray accent */
+}
+:root[data-theme='light'] {
+  --bg: linear-gradient(135deg, #f9fafb, #e5e7eb); /* white → light gray */
+  --text: #111827;
+  --muted: #6b7280;
+  --card: #f3f4f6; /* soft gray cards */
+  --accent: #374151; /* dark gray accent */
+}
+:root[data-theme='light'] {
+  --bg: linear-gradient(135deg,#d7c8d0, #85114b ); /* rose → pink */
+  --text: #1f2937;
+  --muted: #0e0f10;
+  --card: #c1b6bd; /* pale pink cards */
+  --accent: #56062e; /* vibrant pink accent */
+}
+
+
+
+
+
+
+
+
+
+
+
+:root[data-theme='dark'] {
+  --bg: #0b1220;
+  --text: #e6eef8;
+  --muted: #94a3b8;
+  --card: #0f1724;
+  --accent: #60a5fa;
+}
+
+html, body, #root {
+  height: 100%;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  padding: 16px;
+}
+
+.app-shell { max-width: 720px; margin: 0 auto; }
+.top-nav { display:flex; gap:12px; margin-bottom:12px; }
+.nav-link { text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:6px }
+.nav-link:hover { color:var(--accent); background:rgba(100,116,139,0.06) }
+
+.header { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px }
+.title { margin:0; font-size:1.6rem }
+/* .theme-toggle { background:transparent; border:1px solid rgba(0,0,0,0.08); padding:6px 10px } */
+.theme-toggle {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.theme-toggle:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.controls { margin-bottom:12px }
+.task-input { display:flex; gap:8px }
+.input { flex:1; padding:8px 10px; border-radius:6px; border:1px solid #d1d5db; background:var(--card); color:var(--text) }
+.btn { background:var(--accent); color:white; border-radius:6px; border:none; padding:8px 12px }
+
+.task-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px }
+/* .task-item { display:flex; justify-content:space-between; align-items:center; padding:10px; border-radius:8px; background:var(--card) } */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--card); /* now pink in light mode */
+}
+
+.task-item.completed .task-text { text-decoration:line-through; opacity:0.7 }
+.task-text { margin-left:8px }
+.delete { background:transparent; color:var(--muted); border:none }
+.empty { color:var(--muted) }
+
+.stats { display:flex; flex-direction:column; gap:8px; padding:12px }
+.stat { font-size:1.05rem }
+
+@media (max-width:480px) {
+  .title { font-size:1.2rem }
+  .input { padding:8px }
+  .btn { padding:8px }
+}
+
+/* Ensure theme is applied on initial load */
+:root { --bg: #ffffff; --text: #111827; }
